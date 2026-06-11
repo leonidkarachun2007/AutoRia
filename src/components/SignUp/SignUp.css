@@ -1,0 +1,334 @@
+
+* { box-sizing: border-box; }
+
+.SignUp {
+    min-height: 100vh;
+    background: #fff;
+}
+
+
+#container_sign_up {
+    display: flex;
+    min-height: 100vh;
+}
+
+.hero-img {
+    width: 50%;
+    flex-shrink: 0;
+    object-fit: cover;
+    display: block;
+    min-height: 100vh;
+    position: sticky;
+    top: 0;
+    align-self: flex-start;
+    max-height: 100vh;
+}
+
+#container_form_sign_up {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1.5rem;
+    padding: clamp(2rem, 5vw, 4rem) clamp(2rem, 6vw, 5rem);
+    min-width: 0;
+    background: #fff;
+}
+
+
+.form1 {
+    text-align: center;
+}
+
+.form1 h2 {
+    font-size: clamp(1.375rem, 2.5vw, 2rem);
+    font-weight: 700;
+    color: #1a1d22;
+    margin: 0 0 0.5rem;
+}
+
+.form1 p {
+    font-size: clamp(0.875rem, 1.3vw, 1.125rem);
+    color: #555;
+    margin: 0;
+}
+
+
+.form2 {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.input_sign_up {
+    display: flex;
+    flex-direction: column;
+    gap: 0.375rem;
+    position: relative;
+}
+
+.input_sign_up p {
+    font-size: clamp(0.875rem, 1.3vw, 1.125rem);
+    font-weight: 600;
+    color: #1a1d22;
+    margin: 0;
+}
+
+.input_sign_up input {
+    width: 100%;
+    height: clamp(2.75rem, 4.5vw, 4rem);
+    border: 1.5px solid #D9D9D9;
+    border-radius: 1.25rem;
+    padding: 0 3rem 0 1.25rem;
+    font-size: clamp(0.875rem, 1.3vw, 1.125rem);
+    color: #1a1d22;
+    outline: none;
+    transition: border-color 0.2s ease;
+    background: #fff;
+}
+
+.input_sign_up input:focus {
+    border-color: #2F3C90;
+}
+
+.input_sign_up input::placeholder {
+    color: #989898;
+}
+
+.input_sign_up img {
+    position: absolute;
+    right: 1rem;
+    bottom: clamp(0.7rem, 1.3vw, 1.1rem);
+    width: 1.5rem;
+    height: 1.5rem;
+    cursor: pointer;
+    object-fit: contain;
+}
+
+
+
+
+
+
+.legal {
+    display: flex;
+    align-items: center;
+    gap: 0.625rem;
+}
+
+.legal p {
+    font-size: clamp(0.8125rem, 1.2vw, 1.125rem);
+    color: #1a1d22;
+    margin: 0;
+}
+
+.legal input[type='radio'] {
+    width: 1.375rem;
+    height: 1.375rem;
+    cursor: pointer;
+    flex-shrink: 0;
+    accent-color: #2F3C90;
+}
+
+
+.form2 button {
+    width: 100%;
+    height: clamp(2.75rem, 4.5vw, 4rem);
+    background-color: #2F3C90;
+    color: #fff;
+    border: none;
+    border-radius: 1.25rem;
+    font-size: clamp(1rem, 1.8vw, 1.5rem);
+    font-weight: 700;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+    letter-spacing: 0.05em;
+}
+
+.form2 button:hover {
+    background-color: #3d4eb0;
+}
+
+
+.form3 {
+    display: flex;
+    flex-direction: column;
+    gap: 0.875rem;
+}
+
+.or {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.or p {
+    font-size: clamp(0.75rem, 1.1vw, 1rem);
+    color: #888;
+    margin: 0;
+    white-space: nowrap;
+}
+
+.line {
+    flex: 1;
+    background-color: #D9D9D9;
+    height: 1px;
+}
+
+.form3 button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.875rem;
+    border: 1.5px solid #D9D9D9;
+    border-radius: 1.25rem;
+    width: 100%;
+    height: clamp(2.75rem, 4.5vw, 4rem);
+    font-size: clamp(0.875rem, 1.3vw, 1.125rem);
+    padding: 0 1.25rem;
+    background: #fff;
+    color: #1a1d22;
+    cursor: pointer;
+    transition: border-color 0.2s ease;
+}
+
+.form3 button:hover {
+    border-color: #2F3C90;
+}
+
+.form3 button img {
+    width: 1.5rem;
+    height: 1.5rem;
+    object-fit: contain;
+    flex-shrink: 0;
+}
+
+
+.rout_login {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.375rem;
+    flex-wrap: wrap;
+}
+
+.rout_login p {
+    font-size: clamp(0.8125rem, 1.2vw, 1.125rem);
+    margin: 0;
+    color: #555;
+}
+
+.rout_login p:last-child {
+    color: #2F3C90;
+    cursor: pointer;
+    font-weight: 700;
+    text-decoration: underline;
+}
+
+
+@media (min-width: 1440px) {
+    #container_form_sign_up {
+        padding: 4rem 6rem;
+    }
+}
+
+
+@media (min-width: 1600px) {
+    #container_form_sign_up {
+        padding: 4rem 8rem;
+    }
+}
+
+
+@media (min-width: 1920px) {
+    #container_form_sign_up {
+        padding: 4rem 10rem;
+    }
+}
+
+
+@media (max-width: 1200px) {
+    .hero-img {
+        width: 45%;
+    }
+
+    #container_form_sign_up {
+        padding: 2rem 2.5rem;
+    }
+}
+
+ 
+
+@media (max-width: 992px) {
+    .hero-img {
+        width: 40%;
+    }
+
+    #container_form_sign_up {
+        padding: 2rem;
+    }
+}
+
+
+@media (max-width: 980px) {
+    #container_sign_up {
+        flex-direction: column;
+    }
+
+    .hero-img {
+        width: 100%;
+        min-height: 14rem;
+        max-height: 18rem;
+        position: static;
+    }
+
+    #container_form_sign_up {
+        padding: 2rem 2rem 3rem;
+        justify-content: flex-start;
+    }
+}
+
+
+
+@media (max-width: 768px) {
+    .hero-img {
+        max-height: 14rem;
+    }
+
+    #container_form_sign_up {
+        padding: 1.5rem 1.5rem 2.5rem;
+    }
+
+
+}
+
+
+@media (max-width: 640px) {
+    .hero-img {
+        max-height: 12rem;
+    }
+
+    #container_form_sign_up {
+        padding: 1.5rem 1.25rem 2rem;
+        gap: 1.25rem;
+    }
+}
+
+
+
+@media (max-width: 480px) {
+    .hero-img {
+        max-height: 10rem;
+    }
+
+    #container_form_sign_up {
+        padding: 1.25rem 1rem 2rem;
+        gap: 1rem;
+    }
+
+    .input_sign_up input,
+    .form2 button,
+    .form3 button {
+        border-radius: 0.75rem;
+    }
+}
