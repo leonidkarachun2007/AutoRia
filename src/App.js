@@ -1,12 +1,26 @@
-import logo from './logo.svg';
 import './App.css';
-import LogIn from './components/LogIn/LogIn';
-import  SignUp from './components/SignUp/SignUp';
+import MainPage from './components/MainPage/MainPage';
+import Myfooter from './components/Myfooter/Myfooter';
+import Myheader from './components/Myheader/Myheader';
+import {
+  autoNews,
+  promoCards,
+  quickFields,
+  recommendedCars,
+} from './components/MainPage/data/mainPageData';
 
 function App() {
   return (
     <div className="App">
-           <SignUp/>
+      <Myheader />
+      <MainPage
+        quickFields={quickFields}
+        promoCards={promoCards}
+        recommendedCars={recommendedCars}
+        autoNews={autoNews}
+        searchPlaceholder="Toyota Land Cruiser 300"
+      />
+      <Myfooter />
     </div>
   );
 }
