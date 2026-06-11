@@ -1,8 +1,9 @@
 import { render, screen } from '@testing-library/react';
 import App from './App';
 
-test('renders learn react link', () => {
+test('renders main page search blocks', () => {
   render(<App />);
-  const linkElement = screen.getByText(/learn react/i);
-  expect(linkElement).toBeInTheDocument();
+  expect(screen.getByRole('heading', { name: /^пошук$/i })).toBeInTheDocument();
+  expect(screen.getByRole('heading', { name: /швидкий пошук/i })).toBeInTheDocument();
+  expect(screen.getByRole('heading', { name: /акції на dim auto/i })).toBeInTheDocument();
 });
