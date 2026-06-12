@@ -1,0 +1,714 @@
+.main-page {
+  width: 100%;
+  min-height: 100vh;
+  margin: 0 auto;
+  padding: 54px 0 70px;
+  color: #210b0b;
+  background: #ffffff;
+  box-sizing: border-box;
+}
+
+.main-page,
+.main-page * {
+  box-sizing: border-box;
+}
+
+.container,
+.quick-search {
+  width: 1180px;
+  max-width: calc(100% - 80px);
+  margin: 0 auto;
+}
+
+.search-area {
+  margin-bottom: 72px;
+}
+
+.title {
+  margin: 0;
+  font-family: Inter, sans-serif;
+  font-size: 36px;
+  font-weight: 600;
+  letter-spacing: 0;
+  color: #1d0808;
+  line-height: 1.1;
+}
+
+.search-area .title {
+  margin-bottom: 12px;
+  line-height: 1.05;
+}
+
+.search-box {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 58px;
+  padding: 0 22px;
+  border: 2px solid #4a3a94;
+  border-radius: 29px;
+}
+
+.search-icon {
+  flex: 0 0 auto;
+  width: 36px;
+  height: 36px;
+  margin-right: 22px;
+  color: #4a3a94;
+}
+
+.search-input {
+  width: 100%;
+  border: 0;
+  outline: 0;
+  color: #1d0808;
+  background: transparent;
+  font-size: 20px;
+  line-height: 1;
+}
+
+.search-input::placeholder {
+  color: #9f9797;
+  opacity: 1;
+}
+
+.quick-search {
+  min-height: 330px;
+  margin-bottom: 64px;
+  padding: 32px 16px 28px;
+  border-radius: 10px;
+  box-shadow: 0 6px 14px rgba(70, 39, 39, 0.18);
+}
+
+.quick-top {
+  display: flex;
+  align-items: start;
+  justify-content: space-between;
+  margin-bottom: 28px;
+}
+
+.tabs {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding-right: 8px;
+}
+
+.tab {
+  min-height: 42px;
+  padding: 0 10px;
+  border: 0;
+  border-radius: 8px;
+  color: #1d0808;
+  background: transparent;
+  font-size: 18px;
+  line-height: 1;
+  cursor: pointer;
+  transition: background-color 0.25s ease, color 0.25s ease;
+}
+
+.tab:hover {
+  color: #ffffff;
+  background-color: #6d5ab8;
+}
+
+.active-tab {
+  min-width: 46px;
+  padding: 0 12px;
+  color: #ffffff;
+  background: #504091;
+}
+
+.active-tab:hover {
+  background-color: #504091;
+}
+
+.fields {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 18px 24px;
+}
+
+.field,
+.main-field {
+  display: block;
+  height: 50px;
+  border: 2px solid #1d0808;
+  border-radius: 9px;
+  background: transparent;
+}
+
+.field {
+  width: calc((100% - 72px) / 4);
+}
+
+.quick-bottom {
+  display: flex;
+  align-items: center;
+  gap: 42px;
+  margin-top: 38px;
+}
+
+.main-field {
+  width: 390px;
+  border-color: #4a3a94;
+}
+
+.more-search {
+  padding: 0 0 8px;
+  border: 0;
+  border-bottom: 2px solid #1d0808;
+  color: #1d0808;
+  background: transparent;
+  font-size: 18px;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.promos .title {
+  margin-bottom: 44px;
+}
+
+.promo-list {
+  display: flex;
+  gap: 24px;
+}
+
+.promo-card {
+  display: flex;
+  gap: 14px;
+  width: calc((100% - 48px) / 3);
+  min-height: 170px;
+  padding: 16px 14px;
+  border-radius: 10px;
+  box-shadow: 0 5px 14px rgba(70, 39, 39, 0.18);
+}
+
+.promo-img {
+  width: 116px;
+  height: 138px;
+  flex: 0 0 auto;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+.promo-info {
+  padding-top: 10px;
+}
+
+.promo-info h3 {
+  margin: 0 0 12px;
+  color: #1d0808;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 1.1;
+}
+
+.promo-info p {
+  margin: 0;
+  color: #1d0808;
+  font-size: 16px;
+  line-height: 1.15;
+}
+
+.cars {
+  margin-top: 66px;
+}
+
+.cars .title {
+  margin-bottom: 44px;
+}
+
+.car-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 28px 24px;
+}
+
+.car-card {
+  width: calc((100% - 48px) / 3);
+  overflow: hidden;
+  border-radius: 10px;
+  background: #ffffff;
+  box-shadow: 0 5px 14px rgba(70, 39, 39, 0.18);
+}
+
+.car-photo {
+  position: relative;
+  height: 220px;
+  background: #e9e9e9;
+}
+
+.like-btn {
+  position: absolute;
+  right: 14px;
+  bottom: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  border: 0;
+  border-radius: 10px;
+  color: #000000;
+  background: #ffffff;
+  cursor: pointer;
+  transition: transform 0.25s ease;
+}
+
+.like-btn svg {
+  width: 30px;
+  height: 30px;
+  transition: opacity 0.25s ease;
+}
+
+.heart-fill {
+  position: absolute;
+  color: #504091;
+  opacity: 0;
+}
+
+.like-btn:hover {
+  transform: scale(1.05);
+}
+
+.like-btn:hover .heart-outline {
+  opacity: 0;
+}
+
+.like-btn:hover .heart-fill {
+  opacity: 1;
+}
+
+.car-info {
+  padding: 16px 18px 14px;
+}
+
+.car-info h3 {
+  margin: 0 0 12px;
+  color: #000000;
+  font-size: 22px;
+  font-weight: 700;
+  line-height: 1.1;
+}
+
+.car-price {
+  margin: 0 0 16px;
+  color: #000000;
+  font-size: 19px;
+  line-height: 1;
+}
+
+.car-details {
+  display: flex;
+  flex-wrap: wrap;
+  row-gap: 14px;
+}
+
+.car-details p {
+  display: flex;
+  align-items: center;
+  width: 50%;
+  margin: 0;
+  color: #000000;
+  font-size: 15px;
+  line-height: 1;
+}
+
+.car-details svg,
+.auto-icon {
+  flex: 0 0 auto;
+  margin-right: 10px;
+  font-size: 17px;
+}
+
+.auto-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 18px;
+  height: 18px;
+  border: 2px solid #000000;
+  border-radius: 50%;
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.car-date {
+  margin: 18px 0 0;
+  color: #000000;
+  font-size: 15px;
+}
+
+.show-more {
+  display: block;
+  width: 360px;
+  height: 52px;
+  margin: 38px auto 0;
+  border: 0;
+  border-radius: 8px;
+  color: #ffffff;
+  background: #363f99;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.news {
+  margin-top: 76px;
+}
+
+.news .title {
+  margin-bottom: 44px;
+}
+
+.news-content {
+  display: flex;
+  align-items: stretch;
+  gap: 28px;
+}
+
+.big-news {
+  position: relative;
+  width: 420px;
+  min-height: 320px;
+  overflow: hidden;
+  border-radius: 8px;
+  background: #e9e9e9;
+}
+
+.big-news-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.big-news-text {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  padding: 18px;
+  color: #ffffff;
+  background: linear-gradient(transparent, rgba(0, 0, 0, 0.72));
+}
+
+.big-news-text p,
+.big-news-text h3 {
+  margin: 0;
+}
+
+.big-news-text p {
+  font-size: 18px;
+}
+
+.big-news-text h3 {
+  font-size: 24px;
+  font-weight: 500;
+}
+
+.news-side {
+  display: flex;
+  flex-direction: column;
+  width: 570px;
+}
+
+.news-item {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  margin-bottom: 18px;
+}
+
+.news-img {
+  width: 170px;
+  height: 82px;
+  flex: 0 0 auto;
+  overflow: hidden;
+  border-radius: 8px;
+  background: #e9e9e9;
+}
+
+.news-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.news-info h3 {
+  margin: 0 0 10px;
+  color: #000000;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 1.15;
+}
+
+.news-info p {
+  margin: 0;
+  color: #000000;
+  font-size: 17px;
+  line-height: 1.15;
+}
+
+.read-all {
+  width: 420px;
+  height: 48px;
+  margin-top: auto;
+  border: 0;
+  border-radius: 8px;
+  color: #ffffff;
+  background: #363f99;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+@media (min-width: 1600px) {
+  .main-page {
+    min-height: 1080px;
+    padding: 70px 0 80px;
+  }
+
+  .container,
+  .quick-search {
+    width: 1530px;
+    max-width: 1530px;
+  }
+
+  .search-area {
+    margin-bottom: 108px;
+  }
+
+  .search-area .title {
+    margin-bottom: 14px;
+  }
+
+  .search-box {
+    height: 68px;
+    padding: 0 26px;
+    border-width: 3px;
+    border-radius: 34px;
+  }
+
+  .search-icon {
+    width: 42px;
+    height: 42px;
+    margin-right: 28px;
+  }
+
+  .search-input {
+    font-size: 23px;
+  }
+
+  .quick-search {
+    min-height: 382px;
+    margin-bottom: 82px;
+    padding: 38px 18px 29px;
+  }
+
+  .quick-top {
+    margin-bottom: 33px;
+  }
+
+  .tabs {
+    gap: 14px;
+    padding-right: 19px;
+  }
+
+  .tab {
+    font-size: 20px;
+  }
+
+  .fields {
+    gap: 22px 30px;
+  }
+
+  .field,
+  .main-field {
+    height: 58px;
+    border-width: 3px;
+  }
+
+  .field {
+    width: 355px;
+  }
+
+  .quick-bottom {
+    gap: 50px;
+    margin-top: 48px;
+  }
+
+  .main-field {
+    width: 490px;
+  }
+
+  .more-search {
+    font-size: 19px;
+  }
+
+  .promos .title {
+    margin-bottom: 62px;
+  }
+
+  .promo-list {
+    gap: 30px;
+  }
+
+  .promo-card {
+    gap: 17px;
+    width: 490px;
+    min-height: 196px;
+    padding: 19px 16px;
+  }
+
+  .promo-img {
+    width: 136px;
+    height: 158px;
+  }
+
+  .promo-info {
+    padding-top: 14px;
+  }
+
+  .promo-info h3 {
+    margin-bottom: 17px;
+    font-size: 24px;
+  }
+
+  .promo-info p {
+    max-width: 285px;
+    font-size: 19px;
+    line-height: 1.08;
+  }
+
+  .cars {
+    margin-top: 72px;
+  }
+
+  .cars .title {
+    margin-bottom: 62px;
+  }
+
+  .car-list {
+    gap: 40px 30px;
+  }
+
+  .car-card {
+    width: 490px;
+  }
+
+  .car-photo {
+    height: 338px;
+  }
+
+  .like-btn {
+    right: 16px;
+    bottom: 16px;
+    width: 50px;
+    height: 50px;
+    font-size: 28px;
+  }
+
+  .car-info {
+    padding: 20px 20px 16px;
+  }
+
+  .car-info h3 {
+    margin-bottom: 14px;
+    font-size: 27px;
+  }
+
+  .car-price {
+    margin-bottom: 18px;
+    font-size: 24px;
+  }
+
+  .car-details {
+    row-gap: 18px;
+  }
+
+  .car-details p {
+    font-size: 17px;
+  }
+
+  .car-details svg,
+  .auto-icon {
+    margin-right: 12px;
+    font-size: 20px;
+  }
+
+  .auto-icon {
+    width: 20px;
+    height: 20px;
+    font-size: 13px;
+  }
+
+  .car-date {
+    margin-top: 22px;
+    font-size: 17px;
+  }
+
+  .show-more {
+    width: 490px;
+    height: 56px;
+    margin-top: 40px;
+    font-size: 28px;
+  }
+
+  .news {
+    margin-top: 92px;
+  }
+
+  .news .title {
+    margin-bottom: 62px;
+  }
+
+  .news-content {
+    gap: 30px;
+  }
+
+  .big-news {
+    width: 490px;
+    min-height: 497px;
+  }
+
+  .big-news-text {
+    padding: 22px;
+  }
+
+  .big-news-text p {
+    font-size: 20px;
+  }
+
+  .big-news-text h3 {
+    font-size: 26px;
+  }
+
+  .news-side {
+    width: 650px;
+  }
+
+  .news-item {
+    gap: 28px;
+    margin-bottom: 18px;
+  }
+
+  .news-img {
+    width: 230px;
+    height: 122px;
+  }
+
+  .news-info h3 {
+    margin-bottom: 16px;
+    font-size: 24px;
+  }
+
+  .news-info p {
+    font-size: 20px;
+  }
+
+  .read-all {
+    width: 490px;
+    height: 56px;
+    font-size: 28px;
+  }
+}
