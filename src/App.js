@@ -14,14 +14,14 @@ function App() {
   return (
     <div className="App">
       <Myheader />
-      <MainPage
+      {/* <MainPage
         quickFields={quickFields}
         promoCards={promoCards}
         recommendedCars={recommendedCars}
         autoNews={autoNews}
         searchPlaceholder="Toyota Land Cruiser 300"
-      />
-      {/* <Mywishlist/> */}
+      /> */}
+      <Mywishlist/>
       <Myfooter />
     </div>
   );
