@@ -1,0 +1,383 @@
+
+.Profile {
+    width: 1180px;
+    max-width: calc(100% - 80px);
+    margin: 0 auto;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#container_profile {
+    display: grid;
+    gap: 30px;
+    margin-top: 5em;
+}
+
+
+#container_profile2 {
+    display: flex;
+    gap: 32px;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+#container_profile2 img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    flex-shrink: 0;
+}
+
+.data {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+#container_profile2 h2 {
+    font-size: 28px;
+    margin-block-start: 0;
+    margin-block-end: 0;
+}
+
+#container_profile2 p {
+    font-size: 20px;
+    margin-block-start: 0;
+    margin-block-end: 0;
+}
+
+#container_profile2 button {
+    background-color: #2F3C90;
+    width: 222px;
+    height: 50px;
+    font-size: 18px;
+    color: white;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    white-space: nowrap;
+}
+
+
+.line {
+    width: 100%;
+    height: 2px;
+    background-color: #D9D9D9;
+}
+
+
+#container_profile3 {
+    display: flex;
+    gap: 571px;
+    padding: 20px 0;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.information_sale {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.information_sale h2 {
+    font-size: 32px;
+    margin-block-start: 0;
+    margin-block-end: 0;
+}
+
+.information_sale p {
+    font-size: 18px;
+    margin-block-start: 0;
+    margin-block-end: 0;
+    text-align: center;
+}
+
+#container_profile4 {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.announcement {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    flex-wrap: wrap;
+}
+
+.announcement h2 {
+    font-size: 24px;
+    margin-block-start: 0;
+    margin-block-end: 0;
+}
+
+.announcement button {
+    width: 222px;
+    height: 50px;
+    background-color: #2F3C90;
+    color: white;
+    border-radius: 10px;
+    font-size: 18px;
+    border: none;
+    cursor: pointer;
+    white-space: nowrap;
+}
+
+
+.announcement_car {
+    display: grid;
+    grid-template-columns: 160px 1fr 140px 120px 120px 110px;
+    column-gap: 24px;
+    align-items: center;
+    padding: 16px 0;
+    border-bottom: 1px solid #F0F0F0;
+}
+
+.announcement_car img {
+    width: 100%;
+    height: 110px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.announcement_car_text {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    min-width: 0;
+}
+
+.announcement_car_text2 {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+.announcement_car h3 {
+    font-size: 22px;
+    font-weight: 600;
+    margin-block-start: 0;
+    margin-block-end: 0;
+}
+
+.announcement_car p {
+    font-size: 16px;
+    font-weight: normal;
+    margin-block-start: 0;
+    margin-block-end: 0;
+}
+
+.announcement_car_text3 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+    text-align: center;
+}
+
+.announcement_car_text3 h3 {
+    font-size: 20px;
+    font-weight: 600;
+    margin-block-start: 0;
+    margin-block-end: 0;
+}
+
+.announcement_car_text3 p {
+    font-size: 14px;
+    color: #666;
+    margin-block-start: 0;
+    margin-block-end: 0;
+}
+
+.active,
+.no_active {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    white-space: nowrap;
+}
+
+.circle_active {
+    background-color: #51D34A;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    flex-shrink: 0;
+}
+
+.circle_no_active {
+    background-color: #D34F4A;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    flex-shrink: 0;
+}
+
+.view {
+    color: #2F3C90;
+    font-size: 22px;
+    text-align: center;
+    cursor: pointer;
+    user-select: none;
+}
+
+.view:hover {
+    text-decoration: underline;
+}
+
+@media (min-width: 1600px) {
+    .Profile {
+        width: 1530px;
+        max-width: 1530px;
+    }
+
+    #container_profile3 {
+        gap: 800px;
+    }
+
+    .announcement_car {
+        grid-template-columns: 200px 1fr 160px 140px 140px 130px;
+        column-gap: 30px;
+    }
+
+    .announcement_car img {
+        height: 130px;
+    }
+}
+
+@media (max-width: 1024px) {
+
+
+    #container_profile3 {
+        gap: 80px;
+    }
+
+    .announcement_car {
+        grid-template-columns: 130px 1fr 120px 100px 100px 90px;
+        column-gap: 16px;
+    }
+
+    .announcement_car img {
+        height: 90px;
+    }
+}
+
+@media (max-width: 768px) {
+    .Profile {
+        max-width: calc(100% - 40px);
+    }
+
+    #container_profile {
+        gap: 20px;
+    }
+
+    #container_profile2 {
+        gap: 16px;
+    }
+
+    #container_profile2 img {
+        width: 80px;
+        height: 80px;
+    }
+
+    #container_profile2 h2 { font-size: 20px; }
+    #container_profile2 p  { font-size: 15px; }
+
+    #container_profile2 button,
+    .announcement button {
+        width: 100%;
+        font-size: 15px;
+        height: 44px;
+    }
+
+    #container_profile3 {
+        gap: 40px;
+        padding: 12px 0;
+    }
+
+    .information_sale h2 { font-size: 26px; }
+    .information_sale p  { font-size: 15px; }
+    .announcement h2     { font-size: 20px; }
+
+    .announcement_car {
+        grid-template-columns: 1fr 1fr;
+        column-gap: 16px;
+        row-gap: 12px;
+        padding: 12px 0;
+    }
+
+    .announcement_car img {
+        grid-column: 1 / -1;
+        width: 100%;
+        height: 180px;
+    }
+
+    .announcement_car_text {
+        grid-column: 1 / -1;
+    }
+
+    .announcement_car > h3 {
+        grid-column: 1;
+        font-size: 18px;
+    }
+
+    .active,
+    .no_active {
+        grid-column: 2;
+        justify-self: end;
+    }
+
+    .announcement_car_text3 {
+        flex-direction: row;
+        gap: 4px;
+        justify-content: center;
+    }
+
+    .announcement_car_text3 h3 { font-size: 16px; }
+    .view { font-size: 17px; }
+}
+
+/* ========== SMALL MOBILE ≤ 430px — Figma: margin 20px, gutter 16px ========== */
+@media (max-width: 430px) {
+    .Profile {
+        max-width: calc(100% - 40px); /* 20px з кожного боку як у Figma */
+    }
+
+    #container_profile {
+        gap: 16px;
+    }
+
+    #container_profile2 img {
+        width: 64px;
+        height: 64px;
+    }
+
+    #container_profile2 h2 { font-size: 17px; }
+    #container_profile2 p  { font-size: 13px; }
+
+    .announcement_car {
+        grid-template-columns: 1fr;
+        row-gap: 10px;
+    }
+
+    .announcement_car > h3 {
+        grid-column: 1;
+        font-size: 16px;
+    }
+
+    .active,
+    .no_active {
+        grid-column: 1;
+        justify-self: start;
+    }
+
+    .announcement_car img {
+        height: 150px;
+    }
+
+    .view { font-size: 16px; }
+}

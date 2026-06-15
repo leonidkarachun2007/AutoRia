@@ -1,7 +1,9 @@
 import './App.css';
 import LogIn from './components/LogIn/LogIn';
 import SignUp from './components/SignUp/SignUp';
+import Myheader from './components/Myheader/Myheader';
 import Faq from './components/Faq/Faq';
+import Profile from './components/Profile/Profile';
 
 const faqItems = [
   { id: 1, title: "Купівля автомобіля", content: "Як знайти автомобіль за параметрами?\nЯк зв'язатися з продавцем?\nЯк перевірити історію автомобіля?\nЯк зберегти оголошення в обране?" },
@@ -21,7 +23,9 @@ function App() {
   return (
     <div className="App">
       {/* <Faq items={faqItems} /> */}
-      <LogIn/>
+      {/* <LogIn/> */}
+      <Myheader/>
+      <Profile/> 
     </div>
   );
 }
