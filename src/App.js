@@ -1,6 +1,6 @@
 import './App.css';
-import LogIn from './components/LogIn/LogIn';
-import SignUp from './components/SignUp/SignUp';
+import MainPage from './components/MainPage/MainPage';
+import Myfooter from './components/Myfooter/Myfooter';
 import Myheader from './components/Myheader/Myheader';
 import Faq from './components/Faq/Faq';
 import Profile from './components/Profile/Profile';
@@ -25,8 +25,8 @@ function App() {
     <div className="App">
       {/* <Faq items={faqItems} /> */}
       {/* <LogIn/> */}
-      {/* <Myheader/>
-      <Profile/>  */}
+       {/* <Myheader/>
+      <Profile/>   */}
       <News/>
     </div>
   );

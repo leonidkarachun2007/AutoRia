@@ -1,5 +1,9 @@
-.News {}
+.News {
+    display: grid;
+    gap: 30px;
+}
 
+/* ── container_news ── */
 
 #container_news {
     display: flex;
@@ -15,15 +19,14 @@
 .block_news h1 {
     font-size: 48px;
     font-weight: 600;
-        margin-block-end: 0rem;
-   
+    margin-block-end: 0;
 }
 
 .block_news p {
     color: #5C5C5C;
     font-size: 20px;
-    margin-block-start: 0rem;
-    margin-block-end: 0rem;
+    margin-block-start: 0;
+    margin-block-end: 0;
 }
 
 .texts_block_news1 {
@@ -32,33 +35,40 @@
     gap: 20px;
 }
 
-.byd h2 {
-        position: absolute;
+/* BYD — position: relative дозволяє position: absolute всередині */
+.byd {
+    position: relative;
+}
 
-    margin-top: -161px;
+.byd h2 {
+    position: absolute;
+    bottom: 60px;
+    left: 50px;
     width: 602px;
     color: white;
-    margin-left: 50px;
     font-size: 36px;
+    margin: 0;
 }
 
 .byd p {
     position: absolute;
-    margin-top: -60px;
+    bottom: 20px;
+    left: 50px;
     color: white;
-       margin-left: 50px;
-       font-size: 16px;
+    font-size: 16px;
+    margin: 0;
 }
 
- .block_news2  {
+/* ── block_news2 ── */
+
+.block_news2 {
     display: flex;
     flex-direction: column;
     gap: 20px;
- }
+}
 
 .block_news2 h3 {
     font-size: 32px;
-
 }
 
 .new_block_news2 {
@@ -69,30 +79,35 @@
 .texts_block_news {
     display: flex;
     flex-direction: column;
-
     gap: 63px;
-
-
 }
 
 .texts_block_news h4 {
     width: 240px;
     font-size: 22px;
-    margin-block-start: 0rem;
-    margin-block-end: 0rem;
+    margin-block-start: 0;
+    margin-block-end: 0;
+}
+
+/* Варіанти ширини h4 через CSS-класи замість inline-стилів */
+.h4-wide {
+    width: 333px;
+}
+
+.h4-medium {
+    width: 303px;
 }
 
 .texts_block_news2 {
     display: flex;
-    gap: 133px;
-    
+    justify-content: space-between;
 }
 
 .texts_block_news2 p {
     font-size: 16px;
     color: #5C5C5C;
-        margin-block-start: 0rem;
-    margin-block-end: 0rem;
+    margin-block-start: 0;
+    margin-block-end: 0;
 }
 
 .line_news {
@@ -101,6 +116,7 @@
     height: 2px;
 }
 
+/* ── container_news2 ── */
 
 #container_news2 h2 {
     font-size: 32px;
@@ -113,28 +129,134 @@
 
 .block_news3 {
     box-shadow: 0px 0px 20px -1px rgba(0, 0, 0, 0.325);
-
     width: 360px;
     height: 415px;
+    overflow: hidden;
 }
 
 .block_news3 p {
     font-size: 16px;
     color: #5C5C5C;
-        padding-left: 13px;
-
+    padding-left: 13px;
+    margin-block-start: 0;
+    margin-block-end: 0;
 }
 
 .block_news3 h4 {
     font-size: 22px;
     width: 293px;
-    margin-block-start: 0rem;
-    margin-block-end: 0rem;
+    margin-block-start: 0;
+    margin-block-end: 0;
     padding-left: 13px;
+}
+
+/* Категорія новини — замінює marginBlockStart inline-стилі */
+.news_category {
+    margin-top: 35px;
+    color: #2F3C90;
+}
+
+.news_category--tall {
+    margin-top: 61px;
 }
 
 .flex2_block_news3 {
     display: flex;
     flex-direction: column;
     gap: 30px;
+}
+
+/* ── container_news3 ── */
+
+#container_news3 {
+    display: flex;
+    gap: 10px;
+}
+
+/* block_news4 — position: relative + overlay-div замість магічних відступів */
+.block_news4 {
+    position: relative;
+}
+
+.block_news4__overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    padding: 20px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.block_news4__overlay h2 {
+    color: white;
+    font-size: 28px;
+    margin: 0 0 10px;
+}
+
+.block_news4__overlay p {
+    color: white;
+    width: 390px;
+    font-size: 18px;
+    margin: 0 0 15px;
+}
+
+.block_news4__overlay button {
+    font-size: 20px;
+    background-color: white;
+    width: 234px;
+    height: 60px;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+}
+
+/* ── block_news5 ── */
+
+.block_news5 {
+    background-color: white;
+    width: 620px;
+    height: 217px;
+    box-shadow: 0px 0px 20px -1px rgba(0, 0, 0, 0.325);
+    padding: 20px;
+    border-radius: 10px;
+    box-sizing: border-box;
+}
+
+.block_news5 h2 {
+    font-size: 28px;
+    margin: 0 0 8px;
+}
+
+.block_news5 p {
+    font-size: 20px;
+    color: #5C5C5C;
+    margin: 0 0 16px;
+}
+
+.block_news5 input {
+    background-color: white;
+    border: 1px solid #B0B0B0;
+    border-radius: 10px;
+    width: 370px;
+    height: 60px;
+    font-size: 20px;
+    padding-left: 10px;
+    box-sizing: border-box;
+}
+
+.block_news5 button {
+    background-color: #2F3C90;
+    color: white;
+    width: 200px;
+    height: 60px;
+    border-radius: 10px;
+    font-size: 20px;
+    border: none;
+    cursor: pointer;
+}
+
+.input_row {
+    display: flex;
+    gap: 13px;
+    align-items: center;
 }

@@ -4,6 +4,10 @@ import { FaRegHeart, FaRegUserCircle } from 'react-icons/fa';
 const Myheader = () => (
   <header className="site-header">
     <div className="header-inner">
+      <a className="header-logo" href="#home" aria-label="Fland головна">
+        <img src="/Fland.svg" alt="Fland" />
+      </a>
+
       <nav className="header-nav" aria-label="Головна навігація">
         <a href="#home">Головна</a>
         <a href="#cars">Авто</a>
