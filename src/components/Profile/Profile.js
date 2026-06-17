@@ -8,7 +8,7 @@ export function Profile () {
     <div className='Profile'>
       <div id='container_profile'>
         <div id='container_profile2'>
-          <img src='./Group 215.png' alt='profile'/>
+          <img src='/Group 215.png' alt='profile'/>
           <div className='data'>
             <h2>Перекуп Леонід</h2>
             <p>leonid_legenda@gmail.com</p>
@@ -38,7 +38,7 @@ export function Profile () {
 
           {/* Always visible */}
           <div className='announcement_car'>
-            <img src='./rectangle 38.png' alt='lexus'/>
+            <img src='/nikitalx.png' alt='lexus'/>
             <div className='announcement_car_text'>
               <h3>Lexus LX 500d</h3>
               <div className='announcement_car_text2'>
@@ -53,7 +53,7 @@ export function Profile () {
           </div>
 
           <div className='announcement_car'>
-            <img src='./rectangle 90.png' alt='toyota'/>
+            <img src='/yaiaudi.png' alt='toyota'/>
             <div className='announcement_car_text'>
               <h3>Toyota Land Cruiser 300</h3>
               <div className='announcement_car_text2'>
@@ -69,7 +69,7 @@ export function Profile () {
           </div>
 
           <div className='announcement_car'>
-            <img src='./rectangle 22.png' alt='range rover'/>
+            <img src='/rrl.png' alt='range rover'/>
             <div className='announcement_car_text'>
               <h3>Range Rover</h3>
               <div className='announcement_car_text2'>
@@ -88,7 +88,7 @@ export function Profile () {
           {showMore && (
             <>
               <div className='announcement_car'>
-                <img src='./rectangle 31.png' alt='audi'/>
+                <img src='/vw1.png' alt='audi'/>
                 <div className='announcement_car_text'>
                   <h3>Audi Q5</h3>
                   <div className='announcement_car_text2'>
@@ -103,7 +103,7 @@ export function Profile () {
               </div>
 
               <div className='announcement_car'>
-                <img src='./rectangle 21.png' alt='bmw'/>
+                <img src='/bmwx5M.png' alt='bmw'/>
                 <div className='announcement_car_text'>
                   <h3>BMW X5 M</h3>
                   <div className='announcement_car_text2'>
@@ -118,7 +118,7 @@ export function Profile () {
               </div>
 
               <div className='announcement_car'>
-                <img src='./rectangle 13.png' alt='mercedes'/>
+                <img src='/mercedescla.png' alt='mercedes'/>
                 <div className='announcement_car_text'>
                   <h3>Mercedes S-Class Coupe</h3>
                   <div className='announcement_car_text2'>
