@@ -1,5 +1,6 @@
 import './MainPage.css';
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
 import { IoSearchOutline } from 'react-icons/io5';
 import { FaChevronDown, FaGasPump, FaHeart, FaMapMarkerAlt, FaRegHeart, FaTachometerAlt } from 'react-icons/fa';
 import {
@@ -190,9 +191,9 @@ const MainPage = ({ searchPlaceholder = 'Toyota Land Cruiser 300' }) => {
       </div>
 
       <div className="quick-bottom">
-        <button className="main-field" type="button">
+        <Link className="main-field" to="/offers">
           Шукати
-        </button>
+        </Link>
         <button className="more-search" type="button">
           Розширений пошук
         </button>
@@ -260,9 +261,9 @@ const MainPage = ({ searchPlaceholder = 'Toyota Land Cruiser 300' }) => {
         ))}
       </div>
 
-      <button className="show-more" type="button">
+      <Link className="show-more" to="/offers">
         Показати ще
-      </button>
+      </Link>
     </section>
 
     <section className="container news" aria-labelledby="news-title">

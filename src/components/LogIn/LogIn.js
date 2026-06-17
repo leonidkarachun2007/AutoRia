@@ -1,5 +1,6 @@
 import './LogIn.css';
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
 
 
 export function LogIn () {
@@ -54,12 +55,12 @@ return (
         <div className='line'></div>
       </div>
 
-      <button><img src='./devicon_google.png'></img>Увійти через Google</button>
-      <button><img src='./uiw_apple.png'></img>Увійти через Apple</button>
+      <button><img src='./devicon_google.png' alt='Google'></img>Увійти через Google</button>
+      <button><img src='./uiw_apple.png' alt='Apple'></img>Увійти через Apple</button>
 
       <div className='rout_signup'>
         <p>Ще не маєте акаунта?</p>
-        <p>Зареєструватися</p>
+        <Link to='/signup'>Зареєструватися</Link>
       </div>
     </div>
 
