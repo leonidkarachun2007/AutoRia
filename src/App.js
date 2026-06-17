@@ -1,10 +1,18 @@
 import './App.css';
+import { Navigate, Route, Routes } from 'react-router-dom';
 import MainPage from './components/MainPage/MainPage';
 import Myfooter from './components/Myfooter/Myfooter';
 import Myheader from './components/Myheader/Myheader';
 import Faq from './components/Faq/Faq';
 import Profile from './components/Profile/Profile';
+
 import News from './components/News/News';
+
+import OffersPage from './components/OffersPage/OffersPage';
+import Mywishlist from './components/Mywishlist/Mywishlist';
+import LogIn from './components/LogIn/LogIn';
+import SignUp from './components/SignUp/SignUp';
+
 
 const faqItems = [
   { id: 1, title: "Купівля автомобіля", content: "Як знайти автомобіль за параметрами?\nЯк зв'язатися з продавцем?\nЯк перевірити історію автомобіля?\nЯк зберегти оголошення в обране?" },
@@ -23,11 +31,21 @@ const faqItems = [
 function App() {
   return (
     <div className="App">
-      {/* <Faq items={faqItems} /> */}
-      {/* <LogIn/> */}
-       {/* <Myheader/>
-      <Profile/>   */}
-      <News/>
+
+      <Myheader />
+      <Routes>
+        <Route path="/" element={<MainPage />} />
+        <Route path="/offers" element={<OffersPage />} />
+        <Route path="/signup" element={<SignUp />} />
+        <Route path="/login" element={<LogIn />} />
+        <Route path="/wishlist" element={<Mywishlist />} />
+        <Route path="/profile" element={<Profile />} />
+                <Route path="/news" element={<News />} />
+        <Route path="/support" element={<Faq items={faqItems} />} />
+        <Route path="*" element={<Navigate to="/" replace />} />
+      </Routes>
+      <Myfooter />
+
     </div>
   );
 }

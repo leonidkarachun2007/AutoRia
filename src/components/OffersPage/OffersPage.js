@@ -15,6 +15,7 @@ import {
   FaPlane,
   FaRegSave,
   FaShip,
+  FaSlidersH,
   FaTachometerAlt,
   FaTimes,
   FaTractor,
@@ -70,6 +71,7 @@ const transportIcons = {
 };
 
 const OffersPage = () => {
+  const [isMobileFiltersOpen, setIsMobileFiltersOpen] = useState(false);
   const [openedFilter, setOpenedFilter] = useState(null);
   const [openedSideFilter, setOpenedSideFilter] = useState(null);
   const [selectedBrand, setSelectedBrand] = useState('');
@@ -187,12 +189,248 @@ const OffersPage = () => {
     );
   };
 
+  const renderMobileFilterContent = (filter) => {
+    if (filter === 'Тип транспорту') {
+      return (
+        <div className="mobile-choice-list">
+          {transportTypes.map((transport) => {
+            const TransportIcon = transportIcons[transport.icon] || FaCarSide;
+
+            return (
+              <button
+                className="mobile-choice"
+                type="button"
+                key={transport.title}
+                onClick={() => setSelectedTransport(transport.title)}
+              >
+                <TransportIcon />
+                <span>{transport.title}</span>
+                <span className={selectedTransport === transport.title ? 'body-check active' : 'body-check'} />
+              </button>
+            );
+          })}
+        </div>
+      );
+    }
+
+    if (filter === 'Тип кузова') {
+      return (
+        <div className="mobile-choice-list">
+          {bodyTypes.map((bodyType) => (
+            <button className="mobile-choice" type="button" key={bodyType} onClick={() => setSelectedBodyType(bodyType)}>
+              <span>{bodyType}</span>
+              <span className={selectedBodyType === bodyType ? 'body-check active' : 'body-check'} />
+            </button>
+          ))}
+        </div>
+      );
+    }
+
+    if (filter === 'Регіон') {
+      return (
+        <div className="mobile-choice-list">
+          {[...ukrainianCities.slice(0, 8), ...locationTypes].map((place) => (
+            <button
+              className="mobile-choice"
+              type="button"
+              key={place}
+              onClick={() => (locationTypes.includes(place) ? setSelectedLocation(place) : setSelectedCity(place))}
+            >
+              <span>{place}</span>
+              <span className={selectedCity === place || selectedLocation === place ? 'body-check active' : 'body-check'} />
+            </button>
+          ))}
+        </div>
+      );
+    }
+
+    if (filter === 'Коробка передач') {
+      return (
+        <div className="mobile-choice-list">
+          {transmissionTypes.map((transmission) => (
+            <button className="mobile-choice" type="button" key={transmission} onClick={() => setSelectedTransmission(transmission)}>
+              <span>{transmission}</span>
+              <span className={selectedTransmission === transmission ? 'body-check active' : 'body-check'} />
+            </button>
+          ))}
+        </div>
+      );
+    }
+
+    if (filter === 'Привід') {
+      return (
+        <div className="mobile-choice-list">
+          {driveTypes.map((drive) => (
+            <button className="mobile-choice" type="button" key={drive} onClick={() => setSelectedDrive(drive)}>
+              <span>{drive}</span>
+              <span className={selectedDrive === drive ? 'body-check active' : 'body-check'} />
+            </button>
+          ))}
+        </div>
+      );
+    }
+
+    if (filter === 'Колір') {
+      return (
+        <div className="mobile-color-list">
+          {carColors.map((color) => (
+            <button
+              className={selectedColor === color.title ? 'color-dot active' : 'color-dot'}
+              type="button"
+              key={color.title}
+              aria-label={color.title}
+              style={{ backgroundColor: color.value }}
+              onClick={() => setSelectedColor(color.title)}
+            />
+          ))}
+        </div>
+      );
+    }
+
+    if (filter === 'Об’єм двигуна, л') {
+      return (
+        <div className="mobile-range">
+          <input type="text" placeholder="Від" value={engineFrom} onChange={(event) => setEngineFrom(event.target.value)} />
+          <span />
+          <input type="text" placeholder="До" value={engineTo} onChange={(event) => setEngineTo(event.target.value)} />
+        </div>
+      );
+    }
+
+    if (filter === 'Потужність, к.с.') {
+      return (
+        <div className="mobile-power">
+          <div className="mobile-range">
+            <input type="text" placeholder="Від" value={powerFrom} onChange={(event) => setPowerFrom(event.target.value)} />
+            <span />
+            <input type="text" placeholder="До" value={powerTo} onChange={(event) => setPowerTo(event.target.value)} />
+          </div>
+          <div className="unit-tabs">
+            {['к.с.', 'кВт'].map((unit) => (
+              <button className={powerUnit === unit ? 'unit-tab active' : 'unit-tab'} type="button" key={unit} onClick={() => setPowerUnit(unit)}>
+                {unit}
+              </button>
+            ))}
+          </div>
+        </div>
+      );
+    }
+
+    if (filter === 'Салон та комфорт') {
+      return (
+        <div className="mobile-choice-list">
+          {comfortFilters.flatMap((comfortFilter) => comfortFilter.items).slice(0, 12).map((item) => (
+            <button className="mobile-choice" type="button" key={item} onClick={() => toggleComfortItem(item)}>
+              <span>{item}</span>
+              <span className={selectedComfortItems.includes(item) ? 'body-check active' : 'body-check'} />
+            </button>
+          ))}
+        </div>
+      );
+    }
+
+    if (filter === 'Стан та історія авто') {
+      return (
+        <div className="mobile-chip-list">
+          {['Усі', 'ДТП', 'Без ДТП', ...historyConditionOptions, ...ownerOptions, ...sellerOptions].map((item) => (
+            <button className="history-chip" type="button" key={item} onClick={() => setSelectedAccident(item)}>
+              {item}
+            </button>
+          ))}
+        </div>
+      );
+    }
+
+    if (filter === 'Розмитнення') {
+      return (
+        <div className="mobile-chip-list">
+          {customsOptions.map((option) => (
+            <button className={selectedCustoms === option ? 'history-chip active' : 'history-chip'} type="button" key={option} onClick={() => setSelectedCustoms(option)}>
+              {option}
+            </button>
+          ))}
+        </div>
+      );
+    }
+
+    if (filter === 'VIN-код') {
+      return (
+        <div className="mobile-chip-list">
+          {[...vinCheckOptions, ...freeLandCheckOptions].map((option) => (
+            <button className="history-chip" type="button" key={option} onClick={() => toggleVinOption(option)}>
+              {option}
+            </button>
+          ))}
+        </div>
+      );
+    }
+
+    if (filter === 'Країна пригону') {
+      return (
+        <div className="mobile-choice-list">
+          {importCountries.map((country) => (
+            <button className="mobile-choice" type="button" key={country} onClick={() => toggleCountry(country)}>
+              <span>{country}</span>
+              <span className={selectedCountries.includes(country) ? 'body-check active' : 'body-check'} />
+            </button>
+          ))}
+        </div>
+      );
+    }
+
+    return null;
+  };
+
   return (
     <main className="offers-page">
       <section className="offers-head">
         <div className="offers-title-row">
           <h1>Пошук уживаних авто в Україні</h1>
           <p>Знайдено 52 676 авто</p>
+        </div>
+
+        <button
+          className={isMobileFiltersOpen ? 'mobile-filter-button open' : 'mobile-filter-button'}
+          type="button"
+          onClick={() => setIsMobileFiltersOpen(!isMobileFiltersOpen)}
+        >
+          <FaSlidersH />
+          Фільтри
+        </button>
+
+        <div className={isMobileFiltersOpen ? 'mobile-filter-list open' : 'mobile-filter-list'}>
+          <div className="side-tabs">
+            {sideTabs.map((tab) => (
+              <button
+                className={activeSideTab === tab ? 'side-tab active-side-tab' : 'side-tab'}
+                type="button"
+                key={tab}
+                onClick={() => setActiveSideTab(tab)}
+              >
+                {tab}
+              </button>
+            ))}
+          </div>
+
+          {sideFilters.map((filter) => {
+            const SideIcon = filter === 'Регіон' ? FaMapMarkerAlt : FaCarSide;
+            const isOpen = openedSideFilter === filter;
+
+            return (
+              <div className="mobile-filter-box" key={filter}>
+                <button
+                  className="mobile-filter-row"
+                  type="button"
+                  onClick={() => toggleSideFilter(filter)}
+                >
+                  <SideIcon className="side-filter-icon" />
+                  <span>{filter}</span>
+                  <FaChevronDown className={isOpen ? 'side-filter-arrow open' : 'side-filter-arrow'} />
+                </button>
+                {isOpen && renderMobileFilterContent(filter)}
+              </div>
+            );
+          })}
         </div>
 
         <div className="filters-row">
@@ -355,7 +593,9 @@ const OffersPage = () => {
             </button>
           </div>
 
-          <button className="all-filters" type="button">
+          <p className="mobile-result-count">Знайдено 52 676 авто</p>
+
+          <button className="all-filters" type="button" onClick={() => setIsMobileFiltersOpen(true)}>
             <span className="filter-square" />
             Усі фільтри
           </button>
@@ -363,9 +603,24 @@ const OffersPage = () => {
       </section>
 
       <section className="offers-content">
-        <aside className="side-panel">
+        <button
+          className={isMobileFiltersOpen ? 'filters-backdrop open' : 'filters-backdrop'}
+          type="button"
+          aria-label="Закрити фільтри"
+          onClick={() => setIsMobileFiltersOpen(false)}
+        />
+
+        <aside className={isMobileFiltersOpen ? 'side-panel open' : 'side-panel'}>
           <div className="side-title">
             <h2>Усі фільтри</h2>
+            <button
+              className="mobile-filter-close"
+              type="button"
+              aria-label="Закрити фільтри"
+              onClick={() => setIsMobileFiltersOpen(false)}
+            >
+              <FaTimes />
+            </button>
           </div>
 
           <div className="side-tabs">
@@ -871,6 +1126,9 @@ const OffersPage = () => {
             <article className="offer-card" key={car.title}>
               <div className="offer-gallery">
                 <img className="offer-main-img" src={car.image} alt={car.title} />
+                <button className="mobile-offer-heart" type="button" aria-label="Додати в обране">
+                  <FaHeart />
+                </button>
                 <div className="offer-thumbs">
                   {car.thumbs.map((thumb) => (
                     <img src={thumb} alt="" key={thumb} />

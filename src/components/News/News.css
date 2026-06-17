@@ -1,101 +1,135 @@
+/* ══════════════════════════════
+   1. БАЗА (АБСОЛЮТНА КОПІЯ ХЕДЕРА)
+══════════════════════════════ */
 .News {
-    display: grid;
-    gap: 30px;
+    width: 1180px;
+    max-width: calc(100% - 80px);
+    margin: 0 auto;
+    
+    /* ТІЛЬКИ верх і низ. Боки - 0, щоб текст йшов рівно під логотипом */
+    padding-top: 40px;
+    padding-bottom: 40px;
+    padding-left: 0;
+    padding-right: 0;
+    
+    /* Відстань між секціями новин */
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+    box-sizing: border-box;
 }
 
-/* ── container_news ── */
-
+/* ══════════════════════════════
+   2. ВЕРХНІЙ БЛОК (CSS GRID - щоб не було дірок)
+══════════════════════════════ */
 #container_news {
-    display: flex;
+    display: grid;
+    /* На десктопі: ліва частина 1.4 частини простору, права 1 частина */
+    grid-template-columns: 1.4fr 1fr;
     gap: 30px;
+    width: 100%; /* Залізно на всю ширину .News */
 }
 
 .block_news {
     display: flex;
     flex-direction: column;
-    gap: 85px;
-}
-
-.block_news h1 {
-    font-size: 48px;
-    font-weight: 600;
-    margin-block-end: 0;
-}
-
-.block_news p {
-    color: #5C5C5C;
-    font-size: 20px;
-    margin-block-start: 0;
-    margin-block-end: 0;
+    justify-content: space-between;
+    gap: 30px;
+    width: 100%; /* Примусово розтягуємо на всю колонку Grid */
 }
 
 .texts_block_news1 {
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: 16px;
 }
 
-/* BYD — position: relative дозволяє position: absolute всередині */
+.block_news h1 {
+    font-size: 48px;
+    font-weight: 600;
+    margin: 0;
+    line-height: 1.1;
+}
+
+.block_news p {
+    color: #5C5C5C;
+    font-size: 20px;
+    margin: 0;
+}
+
 .byd {
     position: relative;
+    width: 100%; /* Примусово розтягуємо */
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.byd img {
+    width: 100%; /* Картинка заповнить усі 100% батька. Дірки справа не буде. */
+    height: 480px;
+    object-fit: cover;
+    display: block;
 }
 
 .byd h2 {
     position: absolute;
-    bottom: 60px;
-    left: 50px;
-    width: 602px;
+    bottom: 50px;
+    left: 40px;
+    width: 80%;
     color: white;
-    font-size: 36px;
+    font-size: 32px;
     margin: 0;
+    line-height: 1.3;
 }
 
 .byd p {
     position: absolute;
-    bottom: 20px;
-    left: 50px;
+    bottom: 16px;
+    left: 40px;
     color: white;
     font-size: 16px;
     margin: 0;
 }
 
-/* ── block_news2 ── */
-
+/* ── "Найважливіші" (Права колонка) ── */
 .block_news2 {
     display: flex;
     flex-direction: column;
     gap: 20px;
+    width: 100%;
 }
 
 .block_news2 h3 {
     font-size: 32px;
+    margin: 0 0 10px 0;
 }
 
 .new_block_news2 {
     display: flex;
-    gap: 30px;
+    gap: 20px;
+    align-items: flex-start;
+}
+
+.new_block_news2 img {
+    width: 160px;
+    height: 110px;
+    object-fit: cover;
+    border-radius: 8px;
+    flex-shrink: 0;
 }
 
 .texts_block_news {
     display: flex;
     flex-direction: column;
-    gap: 63px;
+    justify-content: space-between;
+    flex: 1;
+    min-height: 110px;
 }
 
 .texts_block_news h4 {
-    width: 240px;
-    font-size: 22px;
-    margin-block-start: 0;
-    margin-block-end: 0;
-}
-
-/* Варіанти ширини h4 через CSS-класи замість inline-стилів */
-.h4-wide {
-    width: 333px;
-}
-
-.h4-medium {
-    width: 303px;
+    font-size: 18px;
+    margin: 0;
+    line-height: 1.4;
 }
 
 .texts_block_news2 {
@@ -104,60 +138,27 @@
 }
 
 .texts_block_news2 p {
-    font-size: 16px;
+    font-size: 14px;
     color: #5C5C5C;
-    margin-block-start: 0;
-    margin-block-end: 0;
+    margin: 0;
 }
 
 .line_news {
-    background-color: #B0B0B0;
-    width: 620px;
-    height: 2px;
+    background-color: #E0E0E0;
+    width: 100%;
+    height: 1px;
 }
 
-/* ── container_news2 ── */
+/* ══════════════════════════════
+   3. ОСТАННІ НОВИНИ (СІТКА 4 шт)
+══════════════════════════════ */
+#container_news2 {
+    width: 100%;
+}
 
 #container_news2 h2 {
     font-size: 32px;
-}
-
-.flex_block_news3 {
-    display: flex;
-    gap: 30px;
-}
-
-.block_news3 {
-    box-shadow: 0px 0px 20px -1px rgba(0, 0, 0, 0.325);
-    width: 360px;
-    height: 415px;
-    overflow: hidden;
-}
-
-.block_news3 p {
-    font-size: 16px;
-    color: #5C5C5C;
-    padding-left: 13px;
-    margin-block-start: 0;
-    margin-block-end: 0;
-}
-
-.block_news3 h4 {
-    font-size: 22px;
-    width: 293px;
-    margin-block-start: 0;
-    margin-block-end: 0;
-    padding-left: 13px;
-}
-
-/* Категорія новини — замінює marginBlockStart inline-стилі */
-.news_category {
-    margin-top: 35px;
-    color: #2F3C90;
-}
-
-.news_category--tall {
-    margin-top: 61px;
+    margin: 0 0 24px 0;
 }
 
 .flex2_block_news3 {
@@ -166,25 +167,79 @@
     gap: 30px;
 }
 
-/* ── container_news3 ── */
-
-#container_news3 {
-    display: flex;
-    gap: 10px;
+.flex_block_news3 {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
 }
 
-/* block_news4 — position: relative + overlay-div замість магічних відступів */
+.block_news3 {
+    box-shadow: 0px 0px 20px -1px rgba(0, 0, 0, 0.15);
+    border-radius: 10px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+.block_news3 img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
+
+.block_news3 p:first-of-type {
+    font-size: 13px;
+    color: #888;
+    padding: 12px 16px 0;
+    margin: 0;
+}
+
+.block_news3 h4 {
+    font-size: 18px;
+    line-height: 1.4;
+    margin: 8px 0 0;
+    padding: 0 16px;
+    flex: 1;
+}
+
+.news_category {
+    margin: 12px 16px 16px;
+    color: #2F3C90;
+    padding: 0;
+}
+
+/* ══════════════════════════════
+   4. ТЕСТ-ДРАЙВ ТА РОЗСИЛКА
+══════════════════════════════ */
+#container_news3 {
+    display: grid;
+    grid-template-columns: 1.4fr 1fr;
+    gap: 30px;
+    width: 100%;
+}
+
 .block_news4 {
     position: relative;
+    width: 100%;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.block_news4 img {
+    width: 100%;
+    height: 100%;
+    min-height: 300px;
+    object-fit: cover;
 }
 
 .block_news4__overlay {
     position: absolute;
     bottom: 0;
     left: 0;
-    padding: 20px;
+    padding: 30px;
     width: 100%;
     box-sizing: border-box;
+    background: linear-gradient(to top, rgba(0,0,0,0.8) 0%, transparent 100%);
 }
 
 .block_news4__overlay h2 {
@@ -195,68 +250,138 @@
 
 .block_news4__overlay p {
     color: white;
-    width: 390px;
     font-size: 18px;
-    margin: 0 0 15px;
+    margin: 0 0 20px;
 }
 
 .block_news4__overlay button {
-    font-size: 20px;
+    font-size: 16px;
     background-color: white;
-    width: 234px;
-    height: 60px;
-    border-radius: 10px;
+    padding: 14px 24px;
+    border-radius: 8px;
     border: none;
     cursor: pointer;
 }
 
-/* ── block_news5 ── */
-
 .block_news5 {
     background-color: white;
-    width: 620px;
-    height: 217px;
-    box-shadow: 0px 0px 20px -1px rgba(0, 0, 0, 0.325);
-    padding: 20px;
-    border-radius: 10px;
+    width: 100%;
+    box-shadow: 0px 0px 20px -1px rgba(0, 0, 0, 0.15);
+    padding: 40px;
+    border-radius: 12px;
     box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .block_news5 h2 {
-    font-size: 28px;
-    margin: 0 0 8px;
+    font-size: 26px;
+    margin: 0 0 10px;
 }
 
 .block_news5 p {
-    font-size: 20px;
+    font-size: 16px;
     color: #5C5C5C;
-    margin: 0 0 16px;
+    margin: 0 0 20px;
+}
+
+.input_row {
+    display: flex;
+    gap: 12px;
 }
 
 .block_news5 input {
     background-color: white;
     border: 1px solid #B0B0B0;
-    border-radius: 10px;
-    width: 370px;
-    height: 60px;
-    font-size: 20px;
-    padding-left: 10px;
+    border-radius: 8px;
+    flex: 1;
+    height: 50px;
+    font-size: 16px;
+    padding-left: 16px;
     box-sizing: border-box;
 }
 
 .block_news5 button {
     background-color: #2F3C90;
     color: white;
-    width: 200px;
-    height: 60px;
-    border-radius: 10px;
-    font-size: 20px;
+    height: 50px;
+    padding: 0 24px;
+    border-radius: 8px;
+    font-size: 16px;
     border: none;
     cursor: pointer;
 }
 
-.input_row {
-    display: flex;
-    gap: 13px;
-    align-items: center;
+/* ══════════════════════════════
+   АДАПТИВНІСТЬ ХЕДЕРА ТА БЛОКІВ
+══════════════════════════════ */
+
+/* ≥ 1600px — Точно як у Header */
+@media (min-width: 1600px) {
+    .News {
+        width: 1530px;
+        max-width: 1530px;
+    }
+    #container_news {
+        grid-template-columns: 1.5fr 1fr;
+    }
+}
+
+/* ≤ 1024px — Планшети (ТУТ ВИРІШУЄТЬСЯ ПРОБЛЕМА З ЧЕРВОНОЮ ЛІНІЄЮ) */
+@media (max-width: 1024px) {
+    #container_news {
+        /* Переводимо в 1 колонку. Контент займе ВСІ 100% ширини */
+        grid-template-columns: 1fr; 
+        gap: 50px;
+    }
+    
+    .byd img {
+        height: 400px; /* Картинка BYD буде широкою, але не надто високою */
+    }
+
+    #container_news3 {
+        grid-template-columns: 1fr;
+    }
+
+    .flex_block_news3 {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* ≤ 600px — Мобайл (Точно як у Header) */
+@media (max-width: 600px) {
+    .News {
+        width: calc(100% - 40px);
+        max-width: 390px;
+        padding-top: 24px;
+        padding-bottom: 24px;
+    }
+
+    .block_news h1 { font-size: 28px; }
+    .block_news p { font-size: 16px; }
+    
+    .byd img { height: 260px; }
+    .byd h2 { font-size: 20px; bottom: 30px; left: 20px; width: 90%; }
+    .byd p { font-size: 14px; bottom: 10px; left: 20px; }
+
+    .block_news2 h3 { font-size: 26px; }
+    .new_block_news2 img { width: 120px; height: 90px; }
+
+    #container_news2 h2 { font-size: 26px; }
+    .flex_block_news3 { grid-template-columns: 1fr; }
+
+    .block_news4__overlay h2 { font-size: 22px; }
+    .block_news4__overlay p { font-size: 16px; }
+
+    .block_news5 { padding: 24px; }
+    .input_row { flex-direction: column; }
+    .block_news5 button { width: 100%; }
+}
+
+/* ≤ 390px — Дрібний мобайл (Точно як у Header) */
+@media (max-width: 390px) {
+    .News {
+        width: calc(100% - 28px);
+    }
 }

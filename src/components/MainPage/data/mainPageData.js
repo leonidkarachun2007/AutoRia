@@ -33,7 +33,7 @@ export const recommendedCars = [
   {
     name: 'Lexus LX 500d',
     price: '115 000 $',
-    image: '/rrl.png',
+    image: '/nikitalx.png',
     mileage: '45 тис. км',
     gearbox: 'Автомат',
     fuel: 'Дизель, 3.3 л',
@@ -41,19 +41,19 @@ export const recommendedCars = [
     date: '3 дні тому',
   },
   {
-    name: 'Toyota Land Cruiser 300',
-    price: '92 000 $',
-    image: '/vw1.png',
-    mileage: '60 тис. км',
-    gearbox: 'Автомат',
-    fuel: 'Бензин, 3.5 л',
-    city: 'Дніпро',
-    date: '1 дні тому',
+    name: 'Daewoo Lanos',
+    price: '2 000 $',
+    image: '/leonidnalanose.png',
+    mileage: '572 тис. км',
+    gearbox: 'Полупістолєт',
+    fuel: 'Авіа топліво, 3.5 л',
+    city: 'Атлантіда',
+    date: '6589 днів тому',
   },
   {
     name: 'Range Rover Autobiography',
     price: '165 000 $',
-    image: '/vw2.png',
+    image: '/andreiirangerover.png',
     mileage: '25 тис. км',
     gearbox: 'Автомат',
     fuel: 'Дизель, 3.0 л',
@@ -63,7 +63,7 @@ export const recommendedCars = [
   {
     name: 'Audi A6 2017',
     price: '23 500 $',
-    image: '/image 13.png',
+    image: '/yaiaudi.png',
     mileage: '140 тис. км',
     gearbox: 'Автомат',
     fuel: 'Дизель, 2.0 л',
@@ -73,7 +73,7 @@ export const recommendedCars = [
   {
     name: 'BMW X5 M',
     price: '98 000 $',
-    image: '/mell.jpg',
+    image: '/bmwx5M.png',
     mileage: '50 тис. км',
     gearbox: 'Автомат',
     fuel: 'Бензин, 4.4 л',
@@ -83,7 +83,7 @@ export const recommendedCars = [
   {
     name: 'Mercedes-Benz S-Class Coupe',
     price: '75 000 $',
-    image: '/lexusgs.png',
+    image: '/mercedescla.png',
     mileage: '85 тис. км',
     gearbox: 'Автомат',
     fuel: 'Бензин, 4.7 л',
@@ -95,8 +95,8 @@ export const recommendedCars = [
 export const autoNews = {
   main: {
     title: 'В Україну завезли',
-    accent: 'Ferrari F13',
-    image: '/ferrarif12.jpg',
+    accent: 'Ferrari F12',
+    image: '/ferrariF12.png',
   },
   items: [
     {

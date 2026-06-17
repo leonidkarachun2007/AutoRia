@@ -351,6 +351,9 @@
 }
 
 .main-field {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   width: 390px;
   height: 50px;
   border: 0;
@@ -360,6 +363,7 @@
   font-size: 18px;
   font-weight: 600;
   cursor: pointer;
+  text-decoration: none;
 }
 
 .more-search {
@@ -556,7 +560,9 @@
 }
 
 .show-more {
-  display: block;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   width: 360px;
   height: 52px;
   margin: 38px auto 0;
@@ -566,6 +572,7 @@
   background: #363f99;
   font-size: 24px;
   cursor: pointer;
+  text-decoration: none;
 }
 
 .news {
@@ -1083,9 +1090,13 @@
   }
 
   .main-field {
-    width: 100%;
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+    width: 100% !important;
     height: 40px;
     font-size: 15px;
+    text-decoration: none;
   }
 
   .more-search {
@@ -1198,10 +1209,14 @@
   }
 
   .show-more {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     width: 100%;
     height: 42px;
     margin-top: 8px;
     font-size: 15px;
+    text-decoration: none;
   }
 
   .news {

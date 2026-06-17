@@ -218,11 +218,12 @@
     color: #555;
 }
 
-.rout_login p:last-child {
+.rout_login a {
     color: #2F3C90;
     cursor: pointer;
     font-weight: 700;
     text-decoration: underline;
+    font-size: clamp(0.8125rem, 1.2vw, 1.125rem);
 }
 
 
