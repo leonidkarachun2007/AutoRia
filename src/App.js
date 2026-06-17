@@ -4,6 +4,7 @@ import SignUp from './components/SignUp/SignUp';
 import Myheader from './components/Myheader/Myheader';
 import Faq from './components/Faq/Faq';
 import Profile from './components/Profile/Profile';
+import News from './components/News/News';
 
 const faqItems = [
   { id: 1, title: "Купівля автомобіля", content: "Як знайти автомобіль за параметрами?\nЯк зв'язатися з продавцем?\nЯк перевірити історію автомобіля?\nЯк зберегти оголошення в обране?" },
@@ -24,8 +25,9 @@ function App() {
     <div className="App">
       {/* <Faq items={faqItems} /> */}
       {/* <LogIn/> */}
-      <Myheader/>
-      <Profile/> 
+      {/* <Myheader/>
+      <Profile/>  */}
+      <News/>
     </div>
   );
 }

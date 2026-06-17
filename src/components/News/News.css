@@ -1,0 +1,140 @@
+.News {}
+
+
+#container_news {
+    display: flex;
+    gap: 30px;
+}
+
+.block_news {
+    display: flex;
+    flex-direction: column;
+    gap: 85px;
+}
+
+.block_news h1 {
+    font-size: 48px;
+    font-weight: 600;
+        margin-block-end: 0rem;
+   
+}
+
+.block_news p {
+    color: #5C5C5C;
+    font-size: 20px;
+    margin-block-start: 0rem;
+    margin-block-end: 0rem;
+}
+
+.texts_block_news1 {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.byd h2 {
+        position: absolute;
+
+    margin-top: -161px;
+    width: 602px;
+    color: white;
+    margin-left: 50px;
+    font-size: 36px;
+}
+
+.byd p {
+    position: absolute;
+    margin-top: -60px;
+    color: white;
+       margin-left: 50px;
+       font-size: 16px;
+}
+
+ .block_news2  {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+ }
+
+.block_news2 h3 {
+    font-size: 32px;
+
+}
+
+.new_block_news2 {
+    display: flex;
+    gap: 30px;
+}
+
+.texts_block_news {
+    display: flex;
+    flex-direction: column;
+
+    gap: 63px;
+
+
+}
+
+.texts_block_news h4 {
+    width: 240px;
+    font-size: 22px;
+    margin-block-start: 0rem;
+    margin-block-end: 0rem;
+}
+
+.texts_block_news2 {
+    display: flex;
+    gap: 133px;
+    
+}
+
+.texts_block_news2 p {
+    font-size: 16px;
+    color: #5C5C5C;
+        margin-block-start: 0rem;
+    margin-block-end: 0rem;
+}
+
+.line_news {
+    background-color: #B0B0B0;
+    width: 620px;
+    height: 2px;
+}
+
+
+#container_news2 h2 {
+    font-size: 32px;
+}
+
+.flex_block_news3 {
+    display: flex;
+    gap: 30px;
+}
+
+.block_news3 {
+    box-shadow: 0px 0px 20px -1px rgba(0, 0, 0, 0.325);
+
+    width: 360px;
+    height: 415px;
+}
+
+.block_news3 p {
+    font-size: 16px;
+    color: #5C5C5C;
+        padding-left: 13px;
+
+}
+
+.block_news3 h4 {
+    font-size: 22px;
+    width: 293px;
+    margin-block-start: 0rem;
+    margin-block-end: 0rem;
+    padding-left: 13px;
+}
+
+.flex2_block_news3 {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
