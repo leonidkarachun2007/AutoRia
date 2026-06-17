@@ -95,7 +95,7 @@ export const recommendedCars = [
 export const autoNews = {
   main: {
     title: 'В Україну завезли',
-    accent: 'Ferrari F12',
+    accent: 'Ferrari F13',
     image: '/ferrarif12.jpg',
   },
   items: [
