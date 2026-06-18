@@ -1,3 +1,5 @@
+
+import './News.css';
 import { useState } from 'react'; 
 
 export function News() {
