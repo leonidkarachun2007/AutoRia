@@ -1,107 +1,91 @@
-/* ══════════════════════════════
-   1. БАЗА (АБСОЛЮТНА КОПІЯ ХЕДЕРА)
-══════════════════════════════ */
+/* ── Основний контейнер (Адаптив як у Header) ── */
 .News {
     width: 1180px;
     max-width: calc(100% - 80px);
     margin: 0 auto;
-    
-    /* ТІЛЬКИ верх і низ. Боки - 0, щоб текст йшов рівно під логотипом */
     padding-top: 40px;
     padding-bottom: 40px;
-    padding-left: 0;
-    padding-right: 0;
-    
-    /* Відстань між секціями новин */
     display: flex;
     flex-direction: column;
-    gap: 60px;
-    box-sizing: border-box;
+    gap: 60px; /* Відстань між основними блоками */
 }
 
-/* ══════════════════════════════
-   2. ВЕРХНІЙ БЛОК (CSS GRID - щоб не було дірок)
-══════════════════════════════ */
+/* ── container_news ── */
 #container_news {
-    display: grid;
-    /* На десктопі: ліва частина 1.4 частини простору, права 1 частина */
-    grid-template-columns: 1.4fr 1fr;
+    display: flex;
     gap: 30px;
-    width: 100%; /* Залізно на всю ширину .News */
 }
 
 .block_news {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    gap: 30px;
-    width: 100%; /* Примусово розтягуємо на всю колонку Grid */
-}
+gap: 3.5rem;
 
-.texts_block_news1 {
-    display: flex;
-    flex-direction: column;
-    gap: 16px;
+    flex: 1 1 0;
+    min-width: 0;
 }
 
 .block_news h1 {
     font-size: 48px;
     font-weight: 600;
-    margin: 0;
-    line-height: 1.1;
+    margin-block-end: 0;
+        margin-block-start: 0;
 }
 
 .block_news p {
     color: #5C5C5C;
     font-size: 20px;
-    margin: 0;
+    margin-block-start: 0;
+    margin-block-end: 0;
+}
+
+.texts_block_news1 {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
 }
 
 .byd {
     position: relative;
-    width: 100%; /* Примусово розтягуємо */
-    border-radius: 12px;
-    overflow: hidden;
 }
 
 .byd img {
-    width: 100%; /* Картинка заповнить усі 100% батька. Дірки справа не буде. */
-    height: 480px;
-    object-fit: cover;
+    width: 100%;
     display: block;
+    border-radius: 12px;
 }
 
 .byd h2 {
     position: absolute;
-    bottom: 50px;
-    left: 40px;
+    bottom: 60px;
+    left: 50px;
     width: 80%;
     color: white;
-    font-size: 32px;
+    font-size: 36px;
     margin: 0;
-    line-height: 1.3;
 }
 
 .byd p {
     position: absolute;
-    bottom: 16px;
-    left: 40px;
+    bottom: 20px;
+    left: 50px;
     color: white;
     font-size: 16px;
     margin: 0;
 }
 
-/* ── "Найважливіші" (Права колонка) ── */
+/* ── block_news2 ── */
 .block_news2 {
     display: flex;
     flex-direction: column;
-    gap: 20px;
-    width: 100%;
+    gap: 1.8rem;
+    flex: 1 1 0;
+    min-width: 0;
 }
 
 .block_news2 h3 {
     font-size: 32px;
-    margin: 0 0 10px 0;
+    margin: 0;
 }
 
 .new_block_news2 {
@@ -112,7 +96,7 @@
 
 .new_block_news2 img {
     width: 160px;
-    height: 110px;
+    height: 120px;
     object-fit: cover;
     border-radius: 8px;
     flex-shrink: 0;
@@ -123,13 +107,18 @@
     flex-direction: column;
     justify-content: space-between;
     flex: 1;
-    min-height: 110px;
+    min-height: 120px;
 }
 
 .texts_block_news h4 {
-    font-size: 18px;
+    font-size: 20px;
     margin: 0;
-    line-height: 1.4;
+    width: auto;
+}
+
+.h4-wide,
+.h4-medium {
+    width: auto;
 }
 
 .texts_block_news2 {
@@ -138,27 +127,22 @@
 }
 
 .texts_block_news2 p {
-    font-size: 14px;
+    font-size: 16px;
     color: #5C5C5C;
-    margin: 0;
+    margin-block-start: 0;
+    margin-block-end: 0;
 }
 
 .line_news {
-    background-color: #E0E0E0;
+    background-color: #B0B0B0;
     width: 100%;
     height: 1px;
 }
 
-/* ══════════════════════════════
-   3. ОСТАННІ НОВИНИ (СІТКА 4 шт)
-══════════════════════════════ */
-#container_news2 {
-    width: 100%;
-}
-
+/* ── container_news2 ── */
 #container_news2 h2 {
     font-size: 32px;
-    margin: 0 0 24px 0;
+    margin-bottom: 20px;
 }
 
 .flex2_block_news3 {
@@ -170,11 +154,11 @@
 .flex_block_news3 {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    gap: 24px;
+    gap: 20px;
 }
 
 .block_news3 {
-    box-shadow: 0px 0px 20px -1px rgba(0, 0, 0, 0.15);
+    box-shadow: 0px 0px 20px -1px rgba(0, 0, 0, 0.325);
     border-radius: 10px;
     overflow: hidden;
     display: flex;
@@ -183,44 +167,48 @@
 
 .block_news3 img {
     width: 100%;
-    height: 180px;
+    height: 200px;
     object-fit: cover;
+    display: block;
 }
 
-.block_news3 p:first-of-type {
-    font-size: 13px;
-    color: #888;
-    padding: 12px 16px 0;
+.block_news3 p {
+    font-size: 14px;
+    color: #5C5C5C;
+    padding: 10px 13px 0;
     margin: 0;
 }
 
 .block_news3 h4 {
     font-size: 18px;
-    line-height: 1.4;
-    margin: 8px 0 0;
-    padding: 0 16px;
+    width: auto;
+    margin: 6px 0 0;
+    padding: 0 13px;
     flex: 1;
 }
 
 .news_category {
-    margin: 12px 16px 16px;
+    margin-top: 12px;
+    margin-bottom: 13px;
     color: #2F3C90;
-    padding: 0;
+    padding: 0 13px;
 }
 
-/* ══════════════════════════════
-   4. ТЕСТ-ДРАЙВ ТА РОЗСИЛКА
-══════════════════════════════ */
+.news_category--tall {
+    margin-top: 12px;
+}
+
+/* ── container_news3 ── */
 #container_news3 {
-    display: grid;
-    grid-template-columns: 1.4fr 1fr;
-    gap: 30px;
-    width: 100%;
+    display: flex;
+    gap: 20px;
+    align-items: stretch;
 }
 
 .block_news4 {
     position: relative;
-    width: 100%;
+    flex: 1 1 0;
+    min-width: 0;
     border-radius: 12px;
     overflow: hidden;
 }
@@ -228,18 +216,19 @@
 .block_news4 img {
     width: 100%;
     height: 100%;
-    min-height: 300px;
     object-fit: cover;
+    display: block;
+    min-height: 240px;
 }
 
 .block_news4__overlay {
     position: absolute;
     bottom: 0;
     left: 0;
-    padding: 30px;
+    padding: 24px;
     width: 100%;
     box-sizing: border-box;
-    background: linear-gradient(to top, rgba(0,0,0,0.8) 0%, transparent 100%);
+    background: linear-gradient(to top, rgba(0,0,0,0.65) 0%, transparent 100%);
 }
 
 .block_news4__overlay h2 {
@@ -251,135 +240,245 @@
 .block_news4__overlay p {
     color: white;
     font-size: 18px;
-    margin: 0 0 20px;
+    margin: 0 0 15px;
+    width: auto;
 }
 
 .block_news4__overlay button {
-    font-size: 16px;
+    font-size: 18px;
     background-color: white;
-    padding: 14px 24px;
-    border-radius: 8px;
+    width: 220px;
+    height: 54px;
+    border-radius: 10px;
     border: none;
     cursor: pointer;
 }
 
+/* ── block_news5 ── */
 .block_news5 {
     background-color: white;
-    width: 100%;
-    box-shadow: 0px 0px 20px -1px rgba(0, 0, 0, 0.15);
+    flex: 0 0 auto;
+    width: 560px;
+    box-shadow: 0px 0px 20px -1px rgba(0, 0, 0, 0.2);
     padding: 40px;
-    border-radius: 12px;
+    border-radius: 10px;
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    box-shadow: 0px 0px 20px -1px rgba(0, 0, 0, 0.325);
 }
 
 .block_news5 h2 {
     font-size: 26px;
-    margin: 0 0 10px;
+    margin: 0 0 8px;
 }
 
 .block_news5 p {
-    font-size: 16px;
+    font-size: 18px;
     color: #5C5C5C;
     margin: 0 0 20px;
-}
-
-.input_row {
-    display: flex;
-    gap: 12px;
 }
 
 .block_news5 input {
     background-color: white;
     border: 1px solid #B0B0B0;
-    border-radius: 8px;
+    border-radius: 10px;
     flex: 1;
-    height: 50px;
-    font-size: 16px;
-    padding-left: 16px;
+    height: 56px;
+    font-size: 18px;
+    padding-left: 14px;
     box-sizing: border-box;
+    min-width: 0;
 }
 
 .block_news5 button {
     background-color: #2F3C90;
     color: white;
-    height: 50px;
+    flex-shrink: 0;
+    height: 56px;
     padding: 0 24px;
-    border-radius: 8px;
-    font-size: 16px;
+    border-radius: 10px;
+    font-size: 18px;
     border: none;
     cursor: pointer;
+    white-space: nowrap;
+}
+
+.input_row {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+}
+
+.show-more-btn {
+    display: none; /* Скрываем кнопку на десктопах и планшетах */
 }
 
 /* ══════════════════════════════
-   АДАПТИВНІСТЬ ХЕДЕРА ТА БЛОКІВ
+   ≥1600px — Великі монітори (як у Header)
 ══════════════════════════════ */
-
-/* ≥ 1600px — Точно як у Header */
 @media (min-width: 1600px) {
     .News {
         width: 1530px;
         max-width: 1530px;
     }
-    #container_news {
-        grid-template-columns: 1.5fr 1fr;
-    }
 }
 
-/* ≤ 1024px — Планшети (ТУТ ВИРІШУЄТЬСЯ ПРОБЛЕМА З ЧЕРВОНОЮ ЛІНІЄЮ) */
-@media (max-width: 1024px) {
-    #container_news {
-        /* Переводимо в 1 колонку. Контент займе ВСІ 100% ширини */
-        grid-template-columns: 1fr; 
-        gap: 50px;
-    }
+/* ══════════════════════════════
+   ≤1280px — Ноутбуки (масштабування контенту)
+══════════════════════════════ */
+@media (max-width: 1280px) {
+    .block_news h1 { font-size: 36px; }
+    .block_news { gap: 137px; }
     
-    .byd img {
-        height: 400px; /* Картинка BYD буде широкою, але не надто високою */
+    .byd h2 {
+        font-size: 24px;
+        bottom: 40px;
+        left: 28px;
     }
 
-    #container_news3 {
-        grid-template-columns: 1fr;
+    .byd p {
+        bottom: 14px;
+        left: 28px;
     }
 
+    .block_news5 {
+        width: 380px;
+        padding: 28px;
+    }
+
+    .block_news5 h2 { font-size: 20px; }
+    .block_news5 p { font-size: 15px; }
+    .block_news5 input { height: 48px; font-size: 15px; }
+    .block_news5 button { height: 48px; font-size: 15px; padding: 0 18px; }
+}
+
+/* ══════════════════════════════
+   ≤967px — Планшети (зміна сітки)
+══════════════════════════════ */
+@media (max-width: 967px) {
+    .News { gap: 40px; }
+    
+    #container_news {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .block_news h1 { font-size: 30px; }
+    .block_news p { font-size: 17px; }
+    
+    .byd h2 { font-size: 20px; bottom: 32px; left: 20px; }
+    .byd p { font-size: 14px; bottom: 10px; left: 20px; }
+
+    .block_news2 h3 { font-size: 26px; }
+    .new_block_news2 img { width: 130px; height: 100px; }
+    .texts_block_news h4 { font-size: 18px; }
+    .texts_block_news { min-height: 100px; }
+
+    #container_news2 h2 { font-size: 26px; }
+    
     .flex_block_news3 {
         grid-template-columns: repeat(2, 1fr);
+        gap: 16px;
     }
+
+    .flex2_block_news3 { gap: 16px; }
+    .block_news3 img { height: 180px; }
+    .block_news3 h4 { font-size: 17px; }
+
+    #container_news3 {
+        flex-direction: column;
+        gap: 16px;
+    }
+
+    .block_news5 {
+        width: 100%;
+        padding: 30px;
+    }
+
+    .block_news5 h2 { font-size: 22px; }
+    .block_news5 p { font-size: 16px; }
+    .block_news5 input { height: 52px; font-size: 16px; }
+    .block_news5 button { height: 52px; font-size: 16px; padding: 0 20px; }
+
+    .block_news4__overlay h2 { font-size: 22px; }
+    .block_news4__overlay p { font-size: 15px; }
 }
 
-/* ≤ 600px — Мобайл (Точно як у Header) */
+/* ══════════════════════════════
+   ≤600px — Мобільні пристрої (як у Header)
+══════════════════════════════ */
 @media (max-width: 600px) {
     .News {
         width: calc(100% - 40px);
         max-width: 390px;
         padding-top: 24px;
         padding-bottom: 24px;
+        gap: 30px;
     }
 
-    .block_news h1 { font-size: 28px; }
-    .block_news p { font-size: 16px; }
+    .block_news h1 { font-size: 24px; }
+    .block_news p { font-size: 15px; }
     
-    .byd img { height: 260px; }
-    .byd h2 { font-size: 20px; bottom: 30px; left: 20px; width: 90%; }
-    .byd p { font-size: 14px; bottom: 10px; left: 20px; }
+    .byd h2 { font-size: 15px; bottom: 24px; left: 14px; }
+    .byd p { font-size: 12px; bottom: 8px; left: 14px; }
 
-    .block_news2 h3 { font-size: 26px; }
-    .new_block_news2 img { width: 120px; height: 90px; }
+    .block_news2 h3 { font-size: 20px; }
+    .new_block_news2 img { width: 90px; height: 70px; }
+    .texts_block_news h4 { font-size: 15px; }
+    .texts_block_news { min-height: 70px; }
+    .texts_block_news2 p { font-size: 12px; }
 
-    #container_news2 h2 { font-size: 26px; }
+    #container_news2 h2 { font-size: 22px; }
+
     .flex_block_news3 { grid-template-columns: 1fr; }
+    .block_news3 img { height: 200px; }
+    .block_news3 h4 { font-size: 17px; }
 
-    .block_news4__overlay h2 { font-size: 22px; }
-    .block_news4__overlay p { font-size: 16px; }
+    .block_news4__overlay h2 { font-size: 18px; }
+    .block_news4__overlay p { font-size: 14px; }
+    .block_news4__overlay button { width: 150px; height: 42px; font-size: 14px; }
 
-    .block_news5 { padding: 24px; }
-    .input_row { flex-direction: column; }
-    .block_news5 button { width: 100%; }
+    .block_news5 { padding: 20px; }
+    .block_news5 h2 { font-size: 18px; }
+    .block_news5 p { font-size: 14px; }
+
+    .input_row {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .block_news5 input,
+    .block_news5 button {
+        width: 100%;
+        height: 50px;
+        font-size: 16px;
+        flex: 0 0 50px;
+    }
+
+    .hide-on-mobile {
+        display: none !important;
+    }
+
+    .show-more-btn {
+        display: block; /* Показываем кнопку только на мобильных */
+        margin: 20px auto 0;
+        color: #2F3C90; /* Цвет как в вашем дизайне */
+        background: none;
+        border: none;
+        font-size: 16px;
+        font-weight: 500;
+        cursor: pointer;
+        text-align: center;
+        width: 100%;
+        padding: 10px;
+    }
 }
 
-/* ≤ 390px — Дрібний мобайл (Точно як у Header) */
+/* ══════════════════════════════
+   ≤390px — Дуже малі екрани (як у Header)
+══════════════════════════════ */
 @media (max-width: 390px) {
     .News {
         width: calc(100% - 28px);

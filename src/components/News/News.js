@@ -1,6 +1,10 @@
+import { useState } from 'react'; // Добавляем импорт useState
 import './News.css';
 
 export function News() {
+  // Состояние для управления показом скрытых новостей
+  const [showMore, setShowMore] = useState(false);
+
   return (
     <div className='News'>
       <div id='container_news'>
@@ -90,7 +94,8 @@ export function News() {
               <h4>Volkswagen запускає доступний електрокар ID.2 у 2026 році</h4>
               <p className='news_category'>Новини</p>
             </div>
-            <div className='block_news3'>
+            {/* Добавляем класс скрытия для 4-го элемента на мобильных */}
+            <div className={`block_news3 ${!showMore ? 'hide-on-mobile' : ''}`}>
               <img src='./image33.png' alt='Toyota Honda Nissan vs BYD' />
               <p>12 червня 2026</p>
               <h4>Toyota, Honda та Nissan змінюють стратегію в боротьбі з BYD</h4>
@@ -98,7 +103,8 @@ export function News() {
             </div>
           </div>
 
-          <div className='flex_block_news3'>
+          {/* Добавляем класс скрытия для всего второго блока на мобильных */}
+          <div className={`flex_block_news3 ${!showMore ? 'hide-on-mobile' : ''}`}>
             <div className='block_news3'>
               <img src='./image34.png' alt='Гібриди тренд' />
               <p>12 червня 2026</p>
@@ -125,6 +131,13 @@ export function News() {
             </div>
           </div>
         </div>
+
+        {/* Кнопка "Показати ще", которая рендерится, пока showMore = false */}
+        {!showMore && (
+          <button className='show-more-btn' onClick={() => setShowMore(true)}>
+            Показати ще
+          </button>
+        )}
       </div>
 
       <div id='container_news3'>
@@ -141,7 +154,7 @@ export function News() {
           <h2>Підпишіться на розсилку</h2>
           <p>Будьте в курсі останніх новин та важливих подій зі світу авто</p>
           <div className='input_row'>
-            <input type='email' placeholder='Введіть e-mail' />
+            <input  type='email' placeholder='Введіть e-mail' />
             <button>Підписатись</button>
           </div>
         </div>
