@@ -1,8 +1,7 @@
-import { useState } from 'react'; // Добавляем импорт useState
-import './News.css';
+import { useState } from 'react'; 
 
 export function News() {
-  // Состояние для управления показом скрытых новостей
+
   const [showMore, setShowMore] = useState(false);
 
   return (
@@ -103,7 +102,7 @@ export function News() {
             </div>
           </div>
 
-          {/* Добавляем класс скрытия для всего второго блока на мобильных */}
+          
           <div className={`flex_block_news3 ${!showMore ? 'hide-on-mobile' : ''}`}>
             <div className='block_news3'>
               <img src='./image34.png' alt='Гібриди тренд' />
@@ -132,7 +131,7 @@ export function News() {
           </div>
         </div>
 
-        {/* Кнопка "Показати ще", которая рендерится, пока showMore = false */}
+       
         {!showMore && (
           <button className='show-more-btn' onClick={() => setShowMore(true)}>
             Показати ще
