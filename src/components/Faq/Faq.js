@@ -73,14 +73,14 @@ function ArticlePanel({ article, onClose, articleRef }) {
       <p>{article.text}</p>
       <img
         className="faq-guide-image"
-        src={`${process.env.PUBLIC_URL}/image%2038.png`}
+        src={`${process.env.PUBLIC_URL}/search_suppport.png`}
         alt="Приклад швидкого пошуку автомобіля"
       />
       <MobileSearchGuide />
       <p>{article.secondText}</p>
       <img
         className="faq-guide-image faq-guide-image--cars"
-        src={`${process.env.PUBLIC_URL}/Rectangle%2046.png`}
+        src={`${process.env.PUBLIC_URL}/search_support2.png`}
         alt="Приклад сторінки з автомобілями"
       />
       <MobileOffersGuide />
