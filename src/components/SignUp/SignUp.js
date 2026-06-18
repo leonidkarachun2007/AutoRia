@@ -17,7 +17,7 @@ return (
     <div id='container_form_log_in'>
       <div className='form1'>
       <h2>Ласкаво просимо</h2>
-      <p>Увійдіть до свого облікового запису, щоб продовжити.</p>
+      <p>Створіть акаунт та почніть користуватися сервісом.</p>
     </div>
 
     <div className='form2'>
