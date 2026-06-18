@@ -17,7 +17,7 @@ const Myheader = () => {
         <nav className={isMenuOpen ? 'header-nav open' : 'header-nav'} aria-label="Головна навігація">
           <Link to="/" onClick={closeMenu}>Головна</Link>
           <Link to="/offers" onClick={closeMenu}>Авто</Link>
-          <a href="/#news" onClick={closeMenu}>Новини</a>
+          <a href="/news" onClick={closeMenu}>Новини</a>
           <Link to="/support" onClick={closeMenu}>Підтримка</Link>
           <Link className="sell-btn mobile-sell" to="/signup" onClick={closeMenu}>
             Продати авто
